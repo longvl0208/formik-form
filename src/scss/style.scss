@@ -9,3 +9,12 @@
 
 // If you want to add something do it here
 @import "custom";
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: local('Source Sans Pro'), url(../assets/fonts/SourceSansPro-Regular.ttf) format('opentype');
+}
+body {
+
+  font-family: "Source Sans Pro"
+
+}

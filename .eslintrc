@@ -28,7 +28,9 @@
     "react/no-array-index-key": [0],
     "no-plusplus": [0],
     "no-shadow": [0],
-    "jsx-a11y/control-has-associated-label": [0]
+    "jsx-a11y/control-has-associated-label": [0],
+    "spaced-comment": [0],
+    "no-unused-vars": [0]
   },
 
   "env": {

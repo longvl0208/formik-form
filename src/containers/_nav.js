@@ -1,16 +1,23 @@
 import React from 'react';
 import CIcon from '@coreui/icons-react';
+import { CCol } from '@coreui/react';
 
 const _nav = [
   {
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
+    // icon: <CIcon name="cil-view-quilt" customClasses="c-sidebar-nav-icon" />,
+    icon: <CIcon customClasses="c-sidebar-nav-icon" content={['512 512', "<path fill='var(--ci-primary-color, currentColor)' d='M16,64V448H496V64ZM464,240H192V96H464ZM192,272H312V416H192ZM48,96H160V416H48ZM344,416V272H464V416Z' class='ci-primary'/>"]} size="1xl" />,
     badge: {
       color: 'info',
       text: 'NEW',
     },
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'User',
+    to: '/users',
   },
   {
     _tag: 'CSidebarNavTitle',
@@ -26,7 +33,7 @@ const _nav = [
     _tag: 'CSidebarNavItem',
     name: 'Typography',
     to: '/theme/typography',
-    icon: 'cil-pencil',
+    icon: 'cil-view-quilt',
   },
   {
     _tag: 'CSidebarNavTitle',
