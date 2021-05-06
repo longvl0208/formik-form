@@ -30,7 +30,8 @@
     "no-shadow": [0],
     "jsx-a11y/control-has-associated-label": [0],
     "spaced-comment": [0],
-    "no-unused-vars": [0]
+    "no-unused-vars": [0],
+    "react/self-closing-comp": [0]
   },
 
   "env": {

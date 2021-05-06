@@ -124,6 +124,7 @@ import {
 import { sygnet } from './sygnet';
 import { logo } from './logo';
 import { logoNegative } from './logo-negative';
+import searchIcon from './search-icon.svg';
 
 export const icons = {
   sygnet,
@@ -250,4 +251,5 @@ export const icons = {
   cibPaypal,
   cibGooglePay,
   cibCcAmex,
+  searchIcon,
 };

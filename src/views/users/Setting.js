@@ -9,14 +9,13 @@ import usersData from './UsersData';
 // eslint-disable-next-line react/prop-types
 const User = ({ match }) => {
   // eslint-disable-next-line
-  // const user = usersData.find((u) => u.id.toString() === match.params.id);
-  const user = usersData.find((u) => u.id.toString() === 1);
+  const user = usersData.find((u) => u.id.toString() === match.params.id);
   // eslint-disable-next-line
   const userDetails = user ? Object.entries(user): [['id', (<span><CIcon className="text-muted" name="cil-x-circle" />Not found</span>)]];
   // eslint-disable-next-line
   return (
     <CRow>
-      <CCol lg={6}>
+      <CCol lg={12}>
         <CCard>
           <CCardHeader>
             User id:

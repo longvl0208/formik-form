@@ -1,28 +1,33 @@
 import React from 'react';
 import {
   CBadge,
-  CDropdown,
+  CDropdown, CDropdownDivider,
   CDropdownItem,
   CDropdownMenu,
-  CDropdownToggle,
+  CDropdownToggle, CHeader,
   CImg,
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
-
+// <CDropdown className="m-1" size="lg">
+//   <CDropdownToggle color="secondary">
+//     Large button
+//   </CDropdownToggle>
+//   <CDropdownMenu>
+//     <CDropdownItem header>Header</CDropdownItem>
+//     <CDropdownItem disabled>Action Disabled</CDropdownItem>
+//     <CDropdownItem>Action</CDropdownItem>
+//     <CDropdownDivider />
+//     <CDropdownItem>Another Action</CDropdownItem>
+//   </CDropdownMenu>
+// </CDropdown>
 const TheHeaderDropdown = () => (
   <CDropdown
     inNav
     className="c-header-nav-items mx-2"
     direction="down"
   >
-    <CDropdownToggle className="c-header-nav-link" caret={false}>
-      <div className="c-avatar">
-        <CImg
-          src="avatars/6.jpg"
-          className="c-avatar-img"
-          alt="admin@bootstrapmaster.com"
-        />
-      </div>
+    <CDropdownToggle className="c-header-nav-link">
+      <h3>LongVL</h3>
     </CDropdownToggle>
     <CDropdownMenu className="pt-0" placement="bottom-end">
       <CDropdownItem

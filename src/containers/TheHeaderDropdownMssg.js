@@ -18,8 +18,8 @@ const TheHeaderDropdownMssg = () => {
       direction="down"
     >
       <CDropdownToggle className="c-header-nav-link" caret={false}>
-        <CIcon name="cil-envelope-open" />
-        <CBadge shape="pill" color="info">{itemsCount}</CBadge>
+        <CIcon name="cil-bell" size="2xl" />
+        <CBadge shape="pill" color="warning">{itemsCount}</CBadge>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
         <CDropdownItem
