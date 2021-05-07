@@ -10,3 +10,46 @@
 .h-65px {
   height: 65px;
 }
+.ml-86 {
+  margin-left: 86px;
+}
+
+.primary-1 {
+  color: #3b548c;
+}
+.dropzone {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fafbfd;
+  border: 1px solid #e5e5e6;
+}
+.thm-setting-container {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  .upload-desc {
+    color: #bbbdc2;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .thm-upload-btn {
+    width: 120px;
+    font-size: 16px;
+  }
+}
+.thm-flex-column {
+  display: flex;
+  flex-direction: column;
+  input {
+    border: none;
+    border-bottom: 1px solid blue;
+  }
+}
