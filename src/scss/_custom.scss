@@ -10,8 +10,12 @@
 .h-65px {
   height: 65px;
 }
-.ml-86 {
-  margin-left: 86px;
+.pl-86 {
+  padding-left: 86px;
+}
+
+.pr-170 {
+  padding-right: 170px;
 }
 
 .primary-1 {
@@ -44,12 +48,54 @@
     width: 120px;
     font-size: 16px;
   }
+  .profile-form {
+    padding: 0 150px;
+  }
+  .thm-form-alert-group {
+    display: flex;
+    margin-bottom: 60px;
+    padding-top: 40px;
+    label {
+      font-size: 20px;
+      display: flex;
+      color: #153376;
+      input {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .right-side {
+    text-align: end;
+    padding-bottom: 50px;
+  }
+  .thm-submit-btn {
+    height: 38px;
+    width: 70px;
+    font-size: 18px;
+  }
 }
 .thm-flex-column {
   display: flex;
   flex-direction: column;
   input {
     border: none;
-    border-bottom: 1px solid blue;
+    outline: none;
+    border-bottom: 3px solid #173577;
+    margin-bottom: 30px;
+    line-height: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  input::placeholder {
+    font-size: 20px;
+  }
+  input:focus {
+    border-bottom: 3px solid #3b86ff;
+
+  }
+  #thm-phone-number-field {
+    margin-bottom: 10px;
   }
 }

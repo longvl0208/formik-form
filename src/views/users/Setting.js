@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  CCol, CRow, CButton,
+  CCol, CRow, CButton, CInputCheckbox, CLabel, CFormGroup,
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
 import { useDropzone } from 'react-dropzone';
@@ -65,12 +65,12 @@ const User = ({ match }) => {
   // eslint-disable-next-line
   return (
     <CRow>
-      <CCol className="ml-86" lg={12}>
+      <CCol className="pl-86" lg={12}>
         <h1 className="primary-1">Your Profile</h1>
       </CCol>
-      <CCol className="ml-86" lg={12}>
+      <CCol className="pl-86 pr-170" lg={12}>
         <section className="thm-setting-container">
-          <CRow className="mb-4">
+          <CRow className="mb-4 pt-5">
             <div
               style={{
                 backgroundImage: files[0] ? `url(${files[0].preview})` : '', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center',
@@ -102,22 +102,45 @@ const User = ({ match }) => {
               }}
             >
               <Form>
-                <CRow>
+                <CRow className="profile-form">
                   <CCol className="thm-flex-column" lg={6}>
-                    <Field id="firstName" name="firstName" placeholder="Jane" />
-                    <Field id="lastName" name="lastName" placeholder="Doe" />
+                    <Field id="thm-first-name-field" name="thm-first-name-field" placeholder="Name" />
+                    <Field id="thm-country-field" name="thm-country-field" placeholder="Country" />
+                    <Field id="thm-email-field" name="thm-email-field" placeholder="Email" type="email" />
                   </CCol>
                   <CCol className="thm-flex-column" lg={6}>
-                    <Field id="firstName" name="firstName" placeholder="Jane" />
+                    <Field id="thm-surname-field" name="thm-surname-field" placeholder="Surname" />
                     <Field
-                      id="email"
-                      name="email"
-                      placeholder="jane@acme.com"
-                      type="email"
+                      id="thm-city-field"
+                      name="thm-city-field"
+                      placeholder="City"
                     />
+                    <Field
+                      id="thm-phone-number-field"
+                      name="thm-phone-number-field"
+                      placeholder="Phone Number"
+                      type="number"
+                    />
+                    <p className="font-lg">Ex: +3361231020 (Fr)</p>
                   </CCol>
-                  <CCol className="thm-flex-column" lg={12}>
-                    <button type="submit">Save</button>
+                  <CCol className="thm-form-alert-group px-0" lg={12} role="group" aria-labelledby="checkbox-group">
+                    <CCol lg={6}>
+                      <label>
+                        <Field type="checkbox" name="thm-email" value="Email" />
+                        Email Alert
+                      </label>
+                    </CCol>
+                    <CCol lg={6}>
+                      <label>
+                        <Field type="checkbox" name="thm-sms" value="SMS" />
+                        SMS Alert
+                      </label>
+                    </CCol>
+                  </CCol>
+                  <CCol col="6" sm="4" md="2" xl className="mb-3 mb-xl-0 right-side ">
+                    <CButton className="thm-submit-btn" size="sm" color="info" type="submit">
+                      Save
+                    </CButton>
                   </CCol>
                 </CRow>
               </Form>
