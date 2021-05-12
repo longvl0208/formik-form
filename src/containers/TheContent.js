@@ -15,12 +15,14 @@ const loading = (
   </div>
 );
 
-const TheContent = () => (
-  <main className="c-main">
-    <CContainer fluid>
-      <Suspense fallback={loading}>
-        <Switch>
-          {routes.map((route, idx) => route.component && (
+const TheContent = () => {
+  console.log('go to main layout');
+  return (
+    <main className="c-main">
+      <CContainer fluid>
+        <Suspense fallback={loading}>
+          <Switch>
+            {routes.map((route, idx) => route.component && (
             <Route
               key={idx}
               path={route.path}
@@ -32,12 +34,12 @@ const TheContent = () => (
                 </CFade>
               )}
             />
-          ))}
-          <Redirect from="/" to="/dashboard" />
-        </Switch>
-      </Suspense>
-    </CContainer>
-  </main>
-);
+            ))}
+            <Redirect from="/" to="/dashboard" />
+          </Switch>
+        </Suspense>
+      </CContainer>
+    </main>
+  ); };
 
 export default React.memo(TheContent);
