@@ -41,7 +41,9 @@ const Setting = React.lazy(() => import('./views/users/Setting'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  {
+    exact: true, path: '/dashboard', name: 'Dashboard', component: Dashboard,
+  },
   {
     path: '/theme', name: 'Theme', component: Colors, exact: true,
   },

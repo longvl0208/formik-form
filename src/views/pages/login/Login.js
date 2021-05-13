@@ -1,5 +1,7 @@
-import React from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {
+  Link, Redirect, useHistory, useLocation,
+} from 'react-router-dom';
 import {
   CButton,
   CCard,
@@ -20,16 +22,10 @@ import useProvideAuth from 'src/reusable/custom-hook';
 const Login = () => {
   const { user, signin } = useProvideAuth();
   const history = useHistory();
-  const location = useLocation();
-  const { from } = location.state || { from: { pathname: '/' } };
-
-  const goToHomePage = () => {
-    console.log('goToHomePage');
-    history.push('/protected');
-  };
 
   const signIn = () => {
-    signin('user-1-company@cementys.com', 'toto', goToHomePage);
+    signin('user-1-company@cementys.com', 'toto', () => { history.push('/'); });
+    // history.push('/');
   };
 
   return (

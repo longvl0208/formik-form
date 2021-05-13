@@ -9,6 +9,7 @@ const useProvideAuth = (props) => {
     signIn(email, password).then((rs) => {
       console.log('Rs', rs);
       setUser(rs.data);
+      localStorage.setItem('user', JSON.stringify(rs.data));
       cb();
     }).catch((error) => {
       console.log(error);
