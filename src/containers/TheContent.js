@@ -19,7 +19,8 @@ const loading = (
 
 const TheContent = () => {
   const history = createBrowserHistory();
-  console.log('go to main layout');
+  console.log('go to main layout', history);
+  // return <h1>hello</h1>;
   return (
     <main className="c-main">
       <CContainer fluid>
@@ -47,6 +48,7 @@ const TheContent = () => {
         {/*</BrowserRouter>*/}
       </CContainer>
     </main>
-  ); };
+  );
+};
 
 export default React.memo(TheContent);

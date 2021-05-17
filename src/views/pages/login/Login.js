@@ -28,6 +28,8 @@ const Login = () => {
     // history.push('/');
   };
 
+  console.log('into login');
+
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>

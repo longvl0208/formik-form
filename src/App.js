@@ -2,7 +2,6 @@ import React, { useContext, useState, createContext } from 'react';
 import {
   BrowserRouter as Router, Route, Switch, useHistory, Link, Redirect, useLocation,
 } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 import './scss/style.scss';
 import useProvideAuth from './reusable/custom-hook';
 // import { TheLayout } from './containers';
@@ -76,23 +75,27 @@ function PrivateRoute(props) {
   //     ))}
   //   />
   // );
-  return user ? <Route {...props} /> : <Redirect to="/login" />;
+  if (!user) return <Redirect to="/login" />;
+  console.log('--Props ', props);
+  return (
+    <Switch>
+      <Route {...props} />
+    </Switch>
+  );
 }
 
 function App() {
-  const history = createBrowserHistory();
-  // const location = useLocation();
+  // const history = useLocation();
 
-  console.log('history', history);
-  // console.log('location', location);
+  // console.log('history', history);
 
   return (
     <ProvideAuth>
       <Router>
         <React.Suspense fallback={loading}>
           <Switch>
-            <PrivateRoute exact path="/" name="Home" render={(props) => <TheLayout {...props} />} />
-            <Route exact path="/login" name="Login Page" render={(props) => <Login {...props} />} />
+            <Route path="/login" name="Login Page" render={(props) => <Login {...props} />} />
+            <PrivateRoute path="/" name="Home" render={(props) => <TheLayout {...props} />} />
             <Route exact path="/register" name="Register Page" render={(props) => <Register {...props} />} />
             {/*<Route path="/" name="Home Page" render={(props) => <TheLayout {...props} />} />*/}
             <Route exact path="/404" name="Page 404" render={(props) => <Page404 {...props} />} />
